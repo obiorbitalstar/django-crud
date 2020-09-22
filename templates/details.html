@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+
+{% block title %}
+details
+{% endblock title %}
+
+{% block main %}
+<h4> Dish name: {{ menu.dish_name }}</h4>
+<h4>Customer: {{ menu.customer }}</h4>
+<h4>Price:{{ menu.price }}JD</h4>
+<h4>Description:
+    {{ menu.description }}</h4>
+
+<a href="{% url 'update_view' menu.pk%}">Update</a>
+<a href="{% url 'delete_view' menu.pk %}">Delete</a>
+{% endblock main %}
+
+{% block footer %}
+  ayy some footer again 
+
+{% endblock footer %}

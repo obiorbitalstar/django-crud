@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block main %}
+	<form action = "" method = "POST"> 
+	{% csrf_token %} 
+	<p> are u sure u want to delete {{menu.dish_name}} ? </p> 
+	
+	
+	<input type='submit' value='ok'> 
+    </form>
+    
+{% endblock main %}

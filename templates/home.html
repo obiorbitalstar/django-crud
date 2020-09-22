@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home page
+{% endblock title %}
+
+
+{% block header %}
+
+<h1> Orders List </h1>
+{% endblock header %}
+
+{% block main %}
+{% for menu in object_list%}
+<li>
+    <a href="{%url 'dish_details' menu.pk %}">{{menu.dish_name}}</a>
+
+</li>
+{% endfor %}
+<a href="{% url 'create_view' %}">Create new order</a>
+{% endblock main %}
+<br> 
+<br>
+
+{% block footer %}
+<br>
+<br>
+some footer
+
+{% endblock footer %}
